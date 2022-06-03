@@ -8,6 +8,7 @@
     "build:watch": "tsc --watch",
     "check": "run-s lint test",
     "check:fix": "run-s lint:fix test",
+    "clean": "rimraf ./build",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint ./src --fix",
     "lint": "run-s eslint typecheck",
@@ -34,10 +35,17 @@
     }
   ],
   "license": "MIT",
+  "dependencies": {
+    "@fresha/api-tools-core": "0.1.0",
+    "@fresha/json-schema-model": "0.1.0",
+    "yaml": "^2.1.1"
+  },
   "devDependencies": {
     "@fresha/eslint-config": "0.1.0",
     "@fresha/jest-config": "0.1.0",
     "@fresha/typescript-config": "0.1.0",
+    "@types/node": "^18.0.0",
+    "deep-object-diff": "^1.1.7",
     "typescript": "^4.7.2"
   }
 }
